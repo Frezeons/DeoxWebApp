@@ -14,7 +14,7 @@ namespace DeoxWebApp.Models
 
         public bool Usernameauth(string username)
         {
-            string query = "SELECT COUNT(*) FROM Users WHERE USERNAME = '" + username + "'"; ;
+            string query = "SELECT COUNT(*) FROM Users WHERE USERNAME = '" + username + "'";
 
             var user = _dataLayer.Select(query).Tables[0];
 
