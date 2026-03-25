@@ -34,4 +34,14 @@ Bu proje, modern bir web uygulamasının temelini oluşturan aşağıdaki özell
 *   **E-posta Gönderimi:** `MailManagement` sınıfı, SMTP üzerinden doğrulama ve şifre sıfırlama e-postalarını gönderir.
 
 ### Front-end (İstemci Tarafı)
-*   **Arayüz & Tasarım:** Projenin kullanıcı arayüzü ve responsive (duy
+*   **Arayüz & Tasarım:** Projenin kullanıcı arayüzü ve responsive (duyarlı) tasarımı için Bootstrap v5.3.3 kullanılmıştır.
+*   **Dinamik İşlemler:** DOM manipülasyonu ve Bootstrap'in JavaScript bileşenleri için jQuery v3.7.1 projeye dahil edilmiştir.
+
+## 📂 Proje Dosya Yapısı ve Açıklamaları
+
+Projenin ana mantığı aşağıdaki C# dosyalarında yer almaktadır:
+
+*   `Register.aspx.cs`: Yeni kullanıcı kayıt işlemlerini yönetir. Kullanıcı adı, e-posta ve şifre için temel doğrulamaları yapar ve başarılı kayıt sonrası doğrulama e-postası gönderimini tetikler.
+*   `Login.aspx.cs`: Kullanıcı giriş işlemlerini yönetir. Başarılı kimlik doğrulamanın ardından kullanıcının e-posta ve yönetici onay durumunu kontrol ederek yönlendirme yapar. Eğer doğrulama eksikse, kullanıcıyı bilgilendirir ve gerekirse yeni doğrulama e-postası gönderir.
+*   `Reset_Password.aspx.cs`: Şifre sıfırlama sürecini yönetir. Hem kullanıcıdan talep alan arayüzün kodunu içerir hem de istemciden gelen AJAX isteklerini işleyerek şifre sıfırlama e-postasını gönderir.
+*   `Models/`: Bu klasörde `Register.cs`, `Auth.cs`, `DataLayer.cs`, `MailManagement.cs` gibi iş mantığını ve veri erişimini soyutlayan sınıflar bulunur.
