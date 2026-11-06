@@ -11,7 +11,7 @@ namespace DeoxWebApp.Models
     public class MailManagement
     {
         #region special
-        protected string _mailAdress= "mahocan.gngr@gmail.com", _mailPassword= "***REMOVED***";
+        protected string _mailAdress = Environment.GetEnvironmentVariable("MAIL_ADDRESS"), _mailPassword = Environment.GetEnvironmentVariable("MAIL_PASSWORD");
         #endregion
 
 
